@@ -1,3 +1,14 @@
+//CODING STAGE 1 & 2: Henri Berisha & Joseph Cittadino
+
+//Matrix Standard Multiplication C = A*B; all matrices sizes randomly picked
+//Minimum size 1x1, Maximum size 8x8....
+// 1 <= rows <=8  1 <= cols <= 8
+// Maximum value in a cell is 30, but it can be changed, change of type may be needed                                                                              |
+
+// Matrices are declared as pointers and memory is allocated dynamically
+// Need to consider matrices as 1D arrays
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include<time.h>
@@ -29,7 +40,7 @@ int main(void){
 
 
     //Printing both matrices
-    printf("Matrix A(%dx%d):\n", row_A, col_A);
+    printf("\nMatrix A(%dx%d):\n", row_A, col_A);
     for (int i = 0; i < row_A; i++) {
         for (int j = 0; j < col_A; j++)
             printf("%d ", A[i * col_A + j]);
@@ -62,6 +73,7 @@ int main(void){
             printf("%d ", C[i * col_B + j]);
         printf("\n");
     }
+    printf("\n");
 
     //Deallocating the memory
     free(A);
